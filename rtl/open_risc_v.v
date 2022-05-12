@@ -38,10 +38,10 @@ module open_risc_v(
 	wire[4:0]   ex_rd_addr_o;
 	wire[31:0]  ex_rd_date_o;
 	wire  		ex_rd_wen_o;
-	
-	
-	
-	
+
+
+
+
 	pc_reg pc_reg_inst(
 		.clk				(clk		),
 		.rst				(rst		),
@@ -75,9 +75,9 @@ module open_risc_v(
 		.rs2_date_i			(regs_reg2_rdate_o	),
 		.inst_o				(id_inst_o			),
 		.inst_addr_o		(id_inst_addr_o		),
-		.op1_o				(id_op1_o			),	
-		.op2_o				(id_op2_o			),	
-		.rd_addr_o			(id_rd_addr_o		),	
+		.op1_o				(id_op1_o			),
+		.op2_o				(id_op2_o			),
+		.rd_addr_o			(id_rd_addr_o		),
 		.reg_wen			(id_reg_wen_o		)
 	);
 
@@ -99,21 +99,21 @@ module open_risc_v(
 		.rst				(rst				),
 		.inst_i				(id_inst_o			),
 		.inst_addr_i		(id_inst_addr_o		),
-		.op1_i				(id_op1_o			),	
+		.op1_i				(id_op1_o			),
 		.op2_i				(id_op2_o			),
-		.rd_addr_i			(id_rd_addr_o		),	
+		.rd_addr_i			(id_rd_addr_o		),
 		.reg_wen_i			(id_reg_wen_o		),
 		.inst_o				(id_ex_inst_o		),
 		.inst_addr_o		(id_ex_inst_addr_o	),
-		.op1_o				(id_ex_op1_o		),	
+		.op1_o				(id_ex_op1_o		),
 		.op2_o				(id_ex_op2_o		),
-		.rd_addr_o			(id_ex_rd_addr_o	),	
+		.rd_addr_o			(id_ex_rd_addr_o	),
 		.reg_wen_o		    (id_ex_reg_wen_o	)
 	);
 
 
 	ex ex_inst(
-		.inst_i				(id_ex_inst_o		),	
+		.inst_i				(id_ex_inst_o		),
 		.inst_addr_i		(id_ex_inst_addr_o	),
 		.op1_i				(id_ex_op1_o		),
 		.op2_i				(id_ex_op2_o		),
