@@ -12,9 +12,9 @@ module ifetch(
 
 
 	assign if2rom_addr_o = pc_addr_i;
-	
+
 	assign inst_addr_o   = pc_addr_i;
-	
+
 	assign inst_o		 = rom_inst_i;
 
 

@@ -12,8 +12,8 @@ module if_id(
 
 
 	dff_set #(32) dff1(clk,rst,`INST_NOP,inst_i,inst_o);
-	
+
 	dff_set #(32) dff2(clk,rst,32'b0,inst_addr_i,inst_addr_o);
-	
-	
+
+
 endmodule
